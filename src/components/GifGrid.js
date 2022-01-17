@@ -31,15 +31,17 @@ export const GifGrid = ({ category }) => {
     return (
         <>
             <h3>{ category }</h3>
-            {/* Enviando la coleccion images al componenten GifGridItem para mostrarlos */}
-            {
-                images.map(img => (
-                    <GifGridItem 
-                        key = {img.id}
-                        { ...img }
-                    />
-                ))
-            }
+            <div className="card-grid">
+                {/* Enviando la coleccion images al componenten GifGridItem para mostrarlos */}
+                {
+                    images.map(img => (
+                        <GifGridItem 
+                            key = {img.id}
+                            { ...img }
+                        />
+                    ))
+                }
+            </div>
         </>
     )
 }
